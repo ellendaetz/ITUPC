@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h2>Beregn fra danske kroner (DKK) til valuta</h2>
+    <p>DKK:  <input type="dkk" id="from" value="100"></p>
+    <p>Valuta:  <input type="valuta" id="to" value=""></p> 
+    <button type="button" onclick="compute_valuta()">Beregn</button>
+
+<script>
+    let to_valuta = document.getElementById("to").value
+
+    function compute_valuta(dkk, to_valuta) {
+    return dkk / to_valuta; 
+    }
+</script>
+</body>
+</html> 
+
+
