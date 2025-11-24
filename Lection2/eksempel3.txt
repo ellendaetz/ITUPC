@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Ølfabrikken</title>
+    </head>
+    <body bgcolor="gold">
+        <form target="_blank" method="post" action=https://www.w3schools.com/action_page.php>
+            <table border="1" margin="10" bgcolor="lightgray">
+                <tr>
+                    <td>Brugernavn<input type="text" name="Username"/></td>
+                    <td>Password <Input type="Password" name="Password"/></td>
+                </tr>
+            </table>
+            <h1>Bryg din egen øl</h1>
+            <!-- originale src=https://glacier-design.com/wp-content/uploads/2022/10/Beer-Tasting-101-scaled.jpg -->
+            <img height="200" src="https://shorturl.at/w9lHI"/>
+            <p>
+                <b>Øl type</b> 
+                <br/>
+                Ale <input type="radio" name="BeerType"> / 
+                Lager <input type="radio" name="BeerType"> / 
+                Wild <input type="radio" name="BeerType"> <br>
+            </p>
+            <table border="0" width="50%" color="lightgray">
+                <tr>
+                    <th>Ingredienser</th>
+                </tr> 
+                <tr>
+                    <td>Malt</td>
+                    <td><input name="Malt1"/></td>
+                    <td><input name="Malt2"/></td>
+                    <td><input name="Malt3"/></td>
+                    <br/>
+                </tr>
+                <tr>
+                    <td>Humle</td>
+                    <td><input name="Humle1"/></td>
+                    <td><input name="Humle2"/></td>
+                    <td><input name="Humle3"/></td>
+                </tr>
+                <tr>
+                    <td>Gær</td>
+                    <td><input name="Gær"/></td><br/>
+                </tr>
+            </table>
+            <br/>
+            <p>
+                <b>Extras</b><br/>
+                Irish moss <input type=checkbox name="extra"><br/>
+                Lactose <input type=checkbox name="extra"><br/>
+                Havre flager <input type=checkbox name="extra"><br/>
+            </p>
+            <input type="submit" value="Send">
+            <input type="reset" value="Reset">
+        </form>
+    </body>
+</html>
