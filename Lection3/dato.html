@@ -1,0 +1,18 @@
+<html>
+    <body>
+        <script>
+            var dato = new Date();
+            var hour = dato.getHours();     
+            
+            document.write("Er det aften nu? <br/>"); 
+            
+            if ( hour >= 18) {
+                document.write("Ja, det er aften!");
+            } else if (hour >= 14) {
+                document.write("Nej, men det er snart aften :)");
+            } else {
+                document.write("Nej, det er ik' aften endnu");
+            }
+        </script>
+    </body> 
+</html>

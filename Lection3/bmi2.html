@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>BMI Beregner</title>
+        <style>
+            .normal {
+                color: green;
+            }
+            #lavt {
+                color: orange;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Beregn dit BMI</h2>
+        <script>
+            /* === Body Mass Index (BMI) beregner === */
+
+            var h = 220;    // højde
+            var w = 84;     // vægt
+
+            document.write("Højde: " + h + " cm.");
+            document.write("<br/>");
+            document.write("Vægt: " + w + " kg.");
+            document.write("<p/>");
+
+            var bmi = w / ((h / 100) * (h / 100)) ;
+
+            document.write("Din BMI er <b>" + bmi + "</b>, ");
+
+            /* === Hvad siger dit BMI? === */
+            if (bmi > 25) {
+                document.write('hvilket er <b style="color: red">for højt</b>.');
+            } else if (bmi >= 20) {
+                document.write('hvilket er <b class="normal">normalt<b/>.');
+            } else {
+                document.write('hvilket er <b id="lavt">for lavt</b>.');
+            }
+        </script>
+    </body> 
+</html>

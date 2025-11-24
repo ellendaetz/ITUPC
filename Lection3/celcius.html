@@ -1,0 +1,22 @@
+<html>
+    <body>
+        Omregn fra Celcius til Fahrenheit:<br/>
+        Hvor mange celcius? <input id="celcius"/> 
+        <p/>
+        <button onclick="   var celcius = document.getElementById('celcius').value;
+                            var fahrenheit = ((celcius * 9) / 5 ) + 32;
+                            alert(fahrenheit + '&deg;F');                          ">
+            ...til Fahrentheit! 
+        </button>
+        <br/>
+        <hr>
+        Omregn fra Fahrenheit til Celcius:<br/>
+        Hvor mange fahrenheit? <input id="fahrenheit"/> 
+        <p/>
+        <button onclick="   var fahr = document.getElementById('fahrenheit').value;
+                            var celc = ((fahr - 32) * 5) / 9;
+                            alert(celc + '&deg;C');                          ">
+            ...til Celcius! 
+        </button>
+    </body> 
+</html>

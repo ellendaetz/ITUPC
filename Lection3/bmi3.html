@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>BMI Beregner</title>
+    </head>
+    <body>
+        <h2>Beregn dit Body Mass Index (BMI):</h2>
+        Højde <input id="height"/> cm<br/>
+        Vægt   <input id="weight"/> kg<br/>  
+        <p/>
+        <button onclick="beregn_bmi()">
+            Beregn BMI! 
+        </button>
+        <script>
+            /* === Body Mass Index (BMI) beregner === */
+            function beregn_bmi(){
+                var h = document.getElementById('height').value;
+                var w = document.getElementById('weight').value;
+
+                var bmi = w / ((h / 100) * (h / 100)) ;
+
+                /* === Hvad siger dit BMI? === */
+                if (bmi > 25) {
+                    document.write('Din bmi er ' + bmi + ', hvilket er <b style="color: red">for højt</b>.');
+                } else if (bmi >= 20) {
+                    alert("Din bmi er " + bmi + ", hvilket er normalt"); // CSS kan ikke stå i alert
+                } else {
+                    document.write('Din bmi er ' + bmi + 'hvilket er <b style="color: orange">for lavt</b>.');
+                }   
+            }           
+        </script>
+    </body> 
+</html>

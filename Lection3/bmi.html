@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <h2>Beregn dit Body Mass Index (BMI):</h2>
+        Højde <input id="height"/> cm<br/>
+        Vægt   <input id="weight"/> kg<br/>         
+        <p/>
+        <button onclick="   var h = document.getElementById('height').value;
+                            var v = document.getElementById('weight').value;
+                            var bmi = v / ((h/100) * (h/100));
+                            bmi = Math.round(bmi * 100) / 100; 
+                            alert('Dit BMI er ' + bmi);                          ">
+            Beregn BMI! 
+        </button>
+    </body> 
+</html>
