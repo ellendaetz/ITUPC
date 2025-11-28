@@ -17,6 +17,7 @@
                 var w = document.getElementById('weight').value;
 
                 var bmi = w / ((h / 100) * (h / 100)) ;
+                bmi = Math.round(bmi * 100) /100; 
 
                 /* === Hvad siger dit BMI? === */
                 if (bmi > 25) {
@@ -24,7 +25,7 @@
                 } else if (bmi >= 20) {
                     alert("Din bmi er " + bmi + ", hvilket er normalt"); // CSS kan ikke stå i alert
                 } else {
-                    document.write('Din bmi er ' + bmi + 'hvilket er <b style="color: orange">for lavt</b>.');
+                    document.write('Din bmi er ' + bmi + ' hvilket er <b style="color: orange">for lavt</b>.');
                 }   
             }           
         </script>
