@@ -1,6 +1,11 @@
 <html>
     <head>
         <title>BMI Beregner</title>
+        <style>
+            #normal {
+                color: green; 
+            }
+        </style>
     </head>
     <body>
         <h2>Beregn dit Body Mass Index (BMI):</h2>
@@ -16,16 +21,19 @@
                 var h = document.getElementById('height').value;
                 var w = document.getElementById('weight').value;
 
+                // beregn bmi med 2 decimaler
                 var bmi = w / ((h / 100) * (h / 100)) ;
                 bmi = Math.round(bmi * 100) /100; 
 
+                document.write("Din BMI er <b>" + bmi + "</b> som er ");
+
                 /* === Hvad siger dit BMI? === */
-                if (bmi > 25) {
-                    document.write('Din bmi er ' + bmi + ', hvilket er <b style="color: red">for højt</b>.');
-                } else if (bmi >= 20) {
-                    alert("Din bmi er " + bmi + ", hvilket er normalt"); // CSS kan ikke stå i alert
+                if (bmi < 20) {
+                    document.write('<b color="orange">for lavt</b>.');
+                } else if (bmi > 25) {
+                    document.write('<b color="red">for højt</b>.');
                 } else {
-                    document.write('Din bmi er ' + bmi + ' hvilket er <b style="color: orange">for lavt</b>.');
+                    document.write('<b id="normal">normalt</b>'); 
                 }   
             }           
         </script>

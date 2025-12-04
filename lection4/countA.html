@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>string</title>
+    </head>
+    <body>
+        <code>
+            <script>
+                var s = "once upon a time, there was a language called javascript.";
+                var a = 0; 
+                for ( var index = 0 ; index < s.length ; index++ ) {
+                    var tegn = s.charAt(index);
+                    if ( tegn == "a") {
+                        a++;  
+                    }
+                }
+
+                document.write("Der er " + a + " a'er i tekststrengen: " + s);
+                document.write("<br>"); 
+
+                var ss = "once upon a time, there was a language called javascript.";
+                var vocals = 0; 
+                for ( var i = 0 ; i < ss.length ; i++ ) {
+                    var tegn = ss.charAt(i);
+                    if ( tegn == "a" || tegn == "e" || tegn == "i" || tegn == "o" || tegn == "u" || tegn == "y" ) {
+                        vocals++;  
+                    }
+                }
+                document.write("Der er " + vocals + " vokaler i tekststrengen: " + ss);
+            </script>
+        </code>
+    </body>
+</html>
+    
