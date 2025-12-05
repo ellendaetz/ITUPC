@@ -30,7 +30,7 @@
             Beregn BMI! 
         </button>
         <script>
-            function beregn_bmi(){
+            function beregn_bmi() {
                 /* === Body Mass Index (BMI) beregner === */
                 var h = document.getElementById('height').value;
                 var v = document.getElementById('weight').value;
@@ -39,15 +39,16 @@
                 var bmi = v / ((h / 100) * (h / 100));
                 bmi = Math.round(bmi * 100) /100; 
                 
-                document.write("Din BMI er <b>" + bmi + "</b> som er ");
+                msg = "Din BMI er " + bmi + " som er ";
                 
                 if ( bmi < 20 ) {
-                document.write("<font color='orange'>for lidt</font>");
+                    msg = msg + "for lidt";
                 } else if ( bmi > 25 ) {
-                document.write("<font color='red'>for meget</font>");
+                    msg = msg + "for meget";
                 } else {
-                document.write("<font color='green'>for normalt</font>");
+                    msg = msg + "for normalt";
                 }
+                alert(msg);
             }
         </script>
     </body>
