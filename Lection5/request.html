@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>REQUEST</title>
+    </head>
+    <body>
+        <script>
+            function request(s) {
+                var x = new XMLHttpRequest();
+                x.open('GET', s, false);
+                x.send();
+                return x.responseText;
+                ipinfo.io/json
+            }   
+
+            var json = request("https://ipinfo.io/json"); // receives JSON 
+            var info = JSON.parse(json); 
+
+            // UDskriv ip-adresse og by
+            document.write("ip-address = " + info.ip + " <br> city = " + info.city); 
+        </script>
+    </body>
+</html>

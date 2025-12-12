@@ -1,0 +1,45 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            // JS Object (Person)
+            var person = {
+                name : "Claus",
+                age : 51, 
+                birthday: function() { this.age++; },
+                display: function() {   document.write(this.name + ' (');
+                                        document.write(this.age + ')<br/>');
+                                    }
+            };
+            
+            // JS Objects => print attributes 
+            document.write('<li>');
+            document.write( person.name ); //LÆSE fra felt
+            document.write(' (' + person.age + ')</li>'); //LÆSE fra felt
+            person.age = person.age + 1; // (læse og) SKRIVE til felt
+            document.write('<li>');
+            document.write( person.name );
+            document.write(' (' + person.age + ')</li>');
+            
+            // call functions on JS objects 
+            person.display();
+            person.birthday();
+            person.display();
+            
+            // JS object => JSON 
+            document.write("JS Object to JSON: <br>"); 
+            var json_person = JSON.stringify(person); 
+            document.write(json_person + "<br>"); 
+            document.write("Parse JSON to JS: <br>"); 
+
+            // JSON => JS Object
+            var json = '{ "name":"Claus", "age":52 }';
+            var js_person = JSON.parse(json);
+            document.write("<b>" + js_person.name + "</b> is <i>");
+            document.write(js_person.age);
+            document.write("</i> years old");
+        </script>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <script>
+            function request(s) {
+                var x = new XMLHttpRequest();
+                x.open('GET', s, false);
+                x.send();
+                return x.responseText;
+                ipinfo.io/json
+            }
+
+            // fetch from real webside
+            var html = request(""); // receives JSON 
+            document.write(html);
+            
+            var s = html.match("<div class=\"report_text temperature\" style=\"color:#[A-Z0-9]+;\">([0-9]+)")[1];
+        </script>
+    </body>
+</html>

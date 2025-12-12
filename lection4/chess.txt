@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <script>
+            for (var i = 0; i < 8; i++) {
+                document.write('<br> ');
+                for (var j = 0; j < 8; j++) {
+                    document.write("  ");
+                    if ((i + j) % 2 == 0) {
+                        document.write("W");
+                    }
+                    else {
+                        document.write("B");
+                    }
+                }
+                
+            }
+        </script>
+    </body>
+</html>
